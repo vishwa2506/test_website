@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map</title>
+    <style>
+        /* Style the map container */
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h3>My Google Map</h3>
+<!-- The map container -->
+<div id="map"></div>
+
+<!-- Load the Google Maps API -->
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+    async defer></script>
+
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // The location of the map's center (latitude and longitude)
+        const location = { lat: 37.422, lng: -122.084 };
+        
+        // The map, centered at the location
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 15,
+            center: location,
+        });
+        
+        // The marker, positioned at the location
+        const marker = new google.maps.Marker({
+            position: location,
+            map: map,
+        });
+    }
+</script>
+
+
+<iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0346234890316!2d-122.08558818468167!3d37.42206597982601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb31aa1d6c9b%3A0x5d73cbcdcd1165f2!2sGoogleplex!5e0!3m2!1sen!2sus!4v1617718934206!5m2!1sen!2sus"
+    width="600"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+</body>
+</html>

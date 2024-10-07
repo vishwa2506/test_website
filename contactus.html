@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fitness Master</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-nav">
+            <img src="./Image/logo1.png" width="120px" height="60px">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Get a Couch</a></li>
+                <li><a href="#">Tips</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><button>Logout</button></li>
+                <img src="./Image/user.png" width="32px" height="30px" class="usericon">
+            </ul>
+        </div>
+    </div>
+
+
+    <!--Google map-->
+
+    <!-- The map container -->
+<div id="map"></div>
+
+<!-- Load the Google Maps API -->
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+    async defer></script>
+
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // The location of the map's center (latitude and longitude)
+        const location = { lat: 37.422, lng: -122.084 };
+        
+        // The map, centered at the location
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 15,
+            center: location,
+        });
+        
+        // The marker, positioned at the location
+        const marker = new google.maps.Marker({
+            position: location,
+            map: map,
+        });
+    }
+</script>
+
+
+<iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0346234890316!2d-122.08558818468167!3d37.42206597982601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb31aa1d6c9b%3A0x5d73cbcdcd1165f2!2sGoogleplex!5e0!3m2!1sen!2sus!4v1617718934206!5m2!1sen!2sus"
+    width="600"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+
+</body>
+</html>
+    
+
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="logo">
+                    <img src="./Image/logo2.png" width="140px" height="70px">
+                </div>
+                <div class="lorem1">
+                    <p>Lorem ipsum dolor sit<br>   amet, consectetur<br> adipiscing elit Nunc<br> maximus</p>
+                </div>
+                <br>
+                <div class="social-icon">
+                    <img src="./Image/facebook.png" width="30px" height="30px">
+                    <img src="./Image/whatsapp.png" width="30px" height="30px">
+                    <img src="./Image/instragram.png" width="30px" height="30px">
+                    <img src="./Image/in.png" width="30px" height="30px">
+                </div>
+            </div> 
+            <div class="footer-column">
+                <h4>COMPANY</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Become a Coach</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Login & Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>SERVICES</h4>
+                <ul>
+                    <li><a href="#">Online Coaching</a></li>
+                    <li><a href="#">Corporate Wellness</a></li>
+                    <li><a href="#">Weight Loss Diet Plan</a></li>
+                    <li><a href="#">Diabetes Lifestyle Management</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>TOOLS</h4>
+                <ul>
+                    <li><a href="#">BMI Calculator</a></li>
+                    <li><a href="#">Macro Calculator</a></li>
+                    <li><a href="#">Body Fat Calculator</a></li>
+                    <li><a href="#">1RM Calculator</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>LEGAL</h4>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Warranty Policy</a></li>
+                    <li><a href="#">Return & Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Fitness Master - Designed by<br> SLIIT Matara Center, Group 06</p>
+            <p><a><u>Terms & Condition</u></a> | <a><u>Privacy Policy</u></a></p>
+        </div>
+    </div>
+</body>
+</html>
